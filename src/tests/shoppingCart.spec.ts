@@ -50,7 +50,6 @@ test('Shopping Cart Test', async ({ page }) => {
 
   // Verify that the subtotal is 0 since the cart is empty
   await storePage.getCartSubtotal().then(subtotal => {
-    console.log('Cart subtotal after closing:', subtotal);
     expect(subtotal).toBe(0);
   });
 

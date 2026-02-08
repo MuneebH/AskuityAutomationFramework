@@ -71,8 +71,6 @@ export class StorePage {
   async verifyProductCount(): Promise<void> {
     const productsFoundCount = await this.getProductsFoundCount();
     const productCount = await this.getProductCount();
-    console.log(`Number of products found: ${productsFoundCount}`);
-    console.log(`Number of products in the products grid: ${productCount}`);
     expect(productsFoundCount).toBe(productCount);
   }  
 
