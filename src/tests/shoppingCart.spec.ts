@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { StorePage } from '../pages/storePage';
 
-test('Shopping Cart Test', async ({ page }) => {
+test('Shopping Cart Flow Test', async ({ page }) => {
   const storePage = new StorePage(page);
   const productsToAdd = ['Blue T-Shirt', 'Black T-shirt with white stripes'];
 

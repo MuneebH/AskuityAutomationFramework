@@ -163,18 +163,6 @@ export class StorePage {
     }
   }
 
-  /** Clicks the minus button `times` times. Optionally provide `currentQuantity` to prevent going below zero. */
-  async clickMinusNTimes(button: Locator, times: number, currentQuantity?: number): Promise<void> {
-    if (times <= 0) throw new Error('times must be greater than 0');
-    if (currentQuantity !== undefined && times > currentQuantity) {
-      throw new Error('Cannot subtract more than the current quantity');
-    }
-    for (let i = 0; i < times; i++) {
-      await button.click();
-      await this.page.waitForTimeout(150);
-    }
-  }
-
   /**
    * Calculates the cost of each item in the cart (price × quantity).
    * Returns an object with product names as keys and costs as values.
